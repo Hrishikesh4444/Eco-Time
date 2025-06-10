@@ -5,8 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 const StoreContextProvider = (props) => {
   const [token, setToken] = useState("");
   let [data,setData]=useState(null);
-  const url = "http://localhost:8000/api/v1/users";
-
+  //const url = `http://localhost:8000/api/v1/users`;
+  const url = `https://ecotimebackend.onrender.com/api/v1/users`;
   const handleError = (err) =>
     toast.error(err, {
       position: "bottom-left",

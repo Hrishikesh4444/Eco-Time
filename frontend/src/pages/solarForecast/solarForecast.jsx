@@ -45,9 +45,6 @@ const SolarForecast = () => {
         className="check-btn">
           Get Prediction
         </button>
-        {/* <div>
-          Predicted Power: 123 W <br /> Model integration not completed yet <br />Currently showing random power
-        </div> */}
         {predictedPower !== null && (
           <div className="result">Predicted Power: {predictedPower} W <span style={{color: "rgb(226, 117, 110)"}}><br /> <br />Model integration not completed yet <br />Currently showing random power</span></div>
         )}
