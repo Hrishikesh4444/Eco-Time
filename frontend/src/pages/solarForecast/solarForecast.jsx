@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./SolarForecast.css";
+import "./solarForecast.css";
 
 const SolarForecast = () => {
   const [time, setTime] = useState("");
