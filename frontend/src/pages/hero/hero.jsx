@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import { Link, Route, useNavigate } from "react-router-dom";
-import ScrollReveal from "../../components/ScrollReveal/ScrollReveal";
+
 import "./hero.css";
 import Weather from "../weather/weather";
 import AboutUs from "../aboutUs/aboutUs";
