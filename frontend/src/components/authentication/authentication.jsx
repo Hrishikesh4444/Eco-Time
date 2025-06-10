@@ -4,7 +4,8 @@ import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 const Authentication = ({ setShowLogin }) => {
-  const { url, token, setToken,handleError,handleSuccess } = useContext(StoreContext);
+  const { url, token, setToken, handleError, handleSuccess } =
+    useContext(StoreContext);
   const [currState, setCurrState] = useState("Sign up");
   const [data, setData] = useState({
     name: "",
@@ -41,7 +42,14 @@ const Authentication = ({ setShowLogin }) => {
       console.error("Login/Register Error:", error);
     }
   };
-  
+  useEffect(() => {
+    scrollTo(0,0);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   // useEffect(()=>{
   //   console.log(data);
   // },[data]);

@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import 'dotenv/config'
 import userRoutes from "./routes/userRoutes.js";
 
 const app=express();
@@ -20,7 +21,7 @@ app.use("/api/v1/users",userRoutes);
 
 const start=async()=>{
 
-    const connectionDb=await mongoose.connect("mongodb+srv://hrishikeshsarma4444:Hrishi2004@cluster0.u60b0.mongodb.net/ecoTime")
+    const connectionDb=await mongoose.connect(`${process.env.MONGODB_URL}`)
         .then(()=>{
             console.log("MongoDb connected");
         })
