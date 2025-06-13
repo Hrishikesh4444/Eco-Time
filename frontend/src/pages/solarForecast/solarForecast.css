@@ -41,7 +41,7 @@
 }
 
 .error {
-  color: red;
+  color: rgb(218, 81, 81);
   margin-top: 1rem;
 }
 .params-list {

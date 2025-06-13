@@ -20,7 +20,8 @@ const SolarForecast = () => {
 
     return hours;
   };
-  const api_url = "http://localhost:8000/api/v1/solar/predict";
+  const api_url = `https://ecotimebackend.onrender.com/api/v1/solar/predict`;
+
   async function fetchSolarPrediction(lat, lon, area, efficiency) {
     try {
       const { data } = await axios.post(
@@ -42,6 +43,7 @@ const SolarForecast = () => {
       // err.response contains the HTTP response (if any)
       const message =
         err.response?.data?.message || err.message || "Prediction API error";
+      setError(message);
       throw new Error(message);
     }
   }
@@ -91,7 +93,7 @@ const SolarForecast = () => {
         </button>
         {predictedPower !== null && (
           <div className="result">
-            Predicted Power: {(predictedPower*1000).toFixed(4)} mW{" "}
+            Predicted Power: {(predictedPower * 1000).toFixed(4)} mW{" "}
           </div>
         )}
         {error && <div className="error">{error}</div>}
