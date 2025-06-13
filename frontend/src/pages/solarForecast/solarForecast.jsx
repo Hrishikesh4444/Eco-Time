@@ -20,8 +20,8 @@ const SolarForecast = () => {
 
     return hours;
   };
-  const api_url = "https://ecotimebackend.onrender.com/predict";
-  
+  const api_url = "https://eco-time.onrender.com/predict";
+
   async function fetchSolarPrediction(lat, lon, area, efficiency) {
     try {
       const { data } = await axios.post(
