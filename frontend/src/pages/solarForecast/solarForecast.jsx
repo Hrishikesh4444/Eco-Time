@@ -49,7 +49,7 @@ const SolarForecast = () => {
   }
 
   let handleSubmit = () => {
-    fetchSolarPrediction(12.97, 77.59, 1.5, 0.18)
+    fetchSolarPrediction(12.97, 77.59, 1.6, 0.20)
       .then((data) => setPredictedPower(data.predicted_power))
       .catch(console.error);
   };
