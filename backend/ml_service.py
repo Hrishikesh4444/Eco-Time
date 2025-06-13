@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from model.solar_model import SolarPowerPredictorPaperModel
 import joblib
 from datetime import datetime, timedelta
+from fastapi.middleware.cors import CORSMiddleware
 
 class PredictRequest(BaseModel):
     lat: float
@@ -12,6 +13,13 @@ class PredictRequest(BaseModel):
     
 
 app = FastAPI()
+app.add_middleware(
+  CORSMiddleware,
+  allow_origins=["*"],
+  allow_methods=["POST","GET"],
+  allow_headers=["*"],
+)
+
 
 model = SolarPowerPredictorPaperModel(0,0,1,1)
 model.model = joblib.load("model/solar_gbr_model.pkl")
