@@ -76,3 +76,17 @@
   font-weight: bold;
   color: #e6e6b9;
 }
+@media (max-width: 600px) {
+  .prediction-container {
+    padding: 1rem !important;
+    margin: 1rem;
+  }
+
+  .params-list {
+    grid-template-columns: 1fr;
+  }
+
+  .params-list li {
+    padding: 0.6rem 0.8rem;
+  }
+}
