@@ -5,7 +5,7 @@ export const getPrediction = async (req, res, next) => {
 
     // call the FastAPI service
     const { data } = await axios.post(
-      "http://127.0.0.1:5000/predict",
+      "https://eco-time.onrender.com",
       { lat, lon, panel_area, panel_efficiency },
       { headers: { "Content-Type": "application/json" } }
     );
