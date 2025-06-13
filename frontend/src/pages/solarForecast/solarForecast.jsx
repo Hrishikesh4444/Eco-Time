@@ -80,11 +80,11 @@ const SolarForecast = () => {
           </li>
           <li>
             <span className="label">Panel area</span>
-            <span className="value">1.5 m²</span>
+            <span className="value">1.6 m²</span>
           </li>
           <li>
             <span className="label">Efficiency</span>
-            <span className="value">18%</span>
+            <span className="value">20%</span>
           </li>
         </ul>
 
