@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import 'dotenv/config'
 import userRoutes from "./routes/userRoutes.js";
+import predictRoutes from "./routes/predictRoutes.js";
 
 const app=express();
 
@@ -11,13 +12,11 @@ app.use(cors());
 app.use(express.json({limit: "50kb"}));
 app.use(express.urlencoded({limit: "50kb", extended: true}));
 
-
 // app.get("/",(req,res)=>{
 //     return res.json({"intro":"hello World"});
 // })
-
 app.use("/api/v1/users",userRoutes);
-
+app.use("/api/v1/solar", predictRoutes);
 
 const start=async()=>{
 
